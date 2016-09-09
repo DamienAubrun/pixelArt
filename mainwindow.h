@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtGui>
+#include <QFileDialog>
+#include <QMessageBox>
 
 namespace Ui {
 class MainWindow;
@@ -14,9 +17,14 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+private slots:
+
+    void on_ouvrir_clicked();
 
 private:
     Ui::MainWindow *ui;
+    QString imageLink;
+    QImage image;
 };
 
 #endif // MAINWINDOW_H
